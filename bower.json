@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "knockout": "~3.3.0",
-    "cloudinary_js": "~1.0.24",
     "cloudinary-url-resolver": "~0.1.0"
   }
 }
