@@ -28,9 +28,9 @@ var addPresetsToTransformations = function addPresetsToTransformations(transform
 
   var preset;
   for (var i in presets) {
-    preset = presets[i];
+    preset = _knockout2['default'].bindingHandlers.cloudinaryUrl.settings.presets[presets[i]];
     if (_utilities.isUndefined(preset)) {
-      throw new Error(preset + ' is not a defined preset');
+      throw new Error(presets[i] + ' is not a defined preset');
     }
 
     for (var type in preset) {

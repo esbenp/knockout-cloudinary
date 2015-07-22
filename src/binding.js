@@ -23,9 +23,9 @@ var addPresetsToTransformations = function(transformations, presets)
 
   var preset;
   for (var i in presets) {
-    preset = presets[i];
+    preset = ko.bindingHandlers.cloudinaryUrl.settings.presets[presets[i]];
     if (isUndefined(preset)) {
-      throw new Error(preset + ' is not a defined preset');
+      throw new Error(presets[i] + ' is not a defined preset');
     }
 
     for(var type in preset) {
