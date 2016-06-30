@@ -1,12 +1,12 @@
-System.register(['knockout', 'cloudinary-url-resolver/resolver', './utilities'], function (_export) {
+System.register(['knockout', 'cloudinary-url-resolver', './utilities'], function (_export) {
   'use strict';
 
   var ko, resolver, isString, isUndefined, resolveFallback, addPresetsToTransformations, update;
   return {
     setters: [function (_knockout) {
       ko = _knockout['default'];
-    }, function (_cloudinaryUrlResolverResolver) {
-      resolver = _cloudinaryUrlResolverResolver['default'];
+    }, function (_cloudinaryUrlResolver) {
+      resolver = _cloudinaryUrlResolver['default'];
     }, function (_utilities) {
       isString = _utilities.isString;
       isUndefined = _utilities.isUndefined;

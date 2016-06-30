@@ -1,11 +1,11 @@
-define(['exports', 'knockout', 'cloudinary-url-resolver/resolver', './utilities'], function (exports, _knockout, _cloudinaryUrlResolverResolver, _utilities) {
+define(['exports', 'knockout', 'cloudinary-url-resolver', './utilities'], function (exports, _knockout, _cloudinaryUrlResolver, _utilities) {
   'use strict';
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
   var _ko = _interopRequireDefault(_knockout);
 
-  var _resolver = _interopRequireDefault(_cloudinaryUrlResolverResolver);
+  var _resolver = _interopRequireDefault(_cloudinaryUrlResolver);
 
   var resolveFallback = function resolveFallback(key) {
     var saved = _ko['default'].bindingHandlers.cloudinaryUrl.settings.fallbacks[key];

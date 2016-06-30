@@ -1,5 +1,5 @@
 import ko from 'knockout';
-import resolver from 'cloudinary-url-resolver/resolver';
+import resolver from 'cloudinary-url-resolver';
 import {
   isString,
   isUndefined
