@@ -6,7 +6,7 @@ System.register(['knockout', 'cloudinary-url-resolver', './utilities'], function
     setters: [function (_knockout) {
       ko = _knockout['default'];
     }, function (_cloudinaryUrlResolver) {
-      resolver = _cloudinaryUrlResolver['default'];
+      resolver = _cloudinaryUrlResolver.resolver;
     }, function (_utilities) {
       isString = _utilities.isString;
       isUndefined = _utilities.isUndefined;

@@ -5,8 +5,6 @@ define(['exports', 'knockout', 'cloudinary-url-resolver', './utilities'], functi
 
   var _ko = _interopRequireDefault(_knockout);
 
-  var _resolver = _interopRequireDefault(_cloudinaryUrlResolver);
-
   var resolveFallback = function resolveFallback(key) {
     var saved = _ko['default'].bindingHandlers.cloudinaryUrl.settings.fallbacks[key];
     if (_utilities.isUndefined(saved)) {
@@ -47,9 +45,9 @@ define(['exports', 'knockout', 'cloudinary-url-resolver', './utilities'], functi
 
     var url;
     if (public_id === null || public_id === '' || typeof public_id === 'undefined') {
-      url = settings.resolveFallbacks ? _resolver['default'](fallback, transformations, isFile) : fallback;
+      url = settings.resolveFallbacks ? _cloudinaryUrlResolver.resolver(fallback, transformations, isFile) : fallback;
     } else {
-      url = _resolver['default'](public_id, transformations, isFile);
+      url = _cloudinaryUrlResolver.resolver(public_id, transformations, isFile);
     }
 
     var tag = element.tagName.toLowerCase();
@@ -71,9 +69,9 @@ define(['exports', 'knockout', 'cloudinary-url-resolver', './utilities'], functi
       fallbacks: {},
       presets: {},
       resolveFallbacks: false
-    }, _resolver['default'].settings),
+    }, _cloudinaryUrlResolver.resolver.settings),
     extend: function extend(settings) {
-      _ko['default'].utils.extend(_resolver['default'].settings, settings);
+      _ko['default'].utils.extend(_cloudinaryUrlResolver.resolver.settings, settings);
       _ko['default'].utils.extend(this.settings, settings);
     },
     update: update
